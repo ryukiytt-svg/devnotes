@@ -53,6 +53,12 @@ header-text {
     visibility: hidden;
 }
 
+.sidebar {
+    position: fixed;
+    top: 75px;
+    width: 150px;
+}
+
 .sidebar-contents {
     grid-area: side;
     min-height: calc(100vh - 75px);
@@ -61,11 +67,12 @@ header-text {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    transition: all 0.15s ease;
+    transition: all 0.2s ease;
+
 }
 
 .sidebar-contents a {
-    padding: 10px;
+    padding: 15px;
     font-size: 20px;
     text-decoration: none;
     color: white;
@@ -73,22 +80,29 @@ header-text {
 
 .sidebar-contents a:hover {
     background-color: #2f3d53;
+    transform: scale(1.05);
+}
+
+#login {
+    margin-top: auto;
 }
 
 .container-info {
     grid-area: sections;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 30px 1fr;
+    grid-template-columns: auto;
+    grid-template-rows: 100vh;
     gap: 15px;
     padding: 20px;
 }
 
 .informacoes {
+    word-break: break-all;
     color: #bfcadf;
     background-color: #334155;
     padding: 30px;
     border-radius: 50px;
+    display: flex;
 }
 
 footer {
@@ -98,13 +112,52 @@ footer {
     text-align: center;
 }
 
-/*-----------------------------------------------------------------------*/
+@media screen and (max-width: 500px) {
+    .div-super {
+        grid-template-areas:
+            "header"
+            "sections"
+            "footer";
+        grid-template-columns: 1fr;
+    }
 
-#titulo {
-    display: flex;
-    align-items: center;
-}
-.container-info #titulo{
-    font-size: larger;
-    margin-left: 1%;
+    .sidebar-contents {
+        position: fixed;
+        width: 300px;
+        height: 100vh;
+        left: -100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 300px;
+        left: -100%;
+    }
+
+    .sidebar-contents a {
+        font-size: 30px;
+    }
+
+    .container-info {
+        width: 100%;
+        grid-template-columns: 100%;
+    }
+
+    #menu-btn {
+        visibility: visible;
+        z-index: 200;
+        cursor: pointer;
+    }
+
+    #menu-btn:hover {
+        background-color: #334155;
+    }
+
+    .sidebar-contents.open {
+        left: 0;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
 }
