@@ -95,6 +95,26 @@ header-text {
     gap: 15px;
     padding: 20px;
 }
+.container-topo{
+    display: flex;
+    height: 50px;
+    width: 100%;
+}
+.container-topo h2{
+    color: #d9d9d9;
+    text-align: center;
+    width: 30%;
+    display: inline-block;
+    font-size: 50px;
+}
+.container-info input{
+    font-size: large;
+    border-radius: 50px;
+    padding: 5px;
+    text-align: center;
+    width: 65%;
+    height: 50px;
+}
 
 .informacoes {
     word-break: break-all;
