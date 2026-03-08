@@ -213,4 +213,7 @@ footer {
     .sidebar.open {
         left: 0;
     }
+    .topo-text{
+        display: none;
+    }
 }

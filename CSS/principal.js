@@ -37,5 +37,23 @@ likes.forEach((botao,i) => {
         localStorage.setItem("likesSalvos", JSON.stringify(likesMemoria));     
     });
 });
-const nome = document.querySelectorAll(".nomes");
-const pesquisa = document.getElementById("BarraDePesquisa")
+const aulas = document.querySelectorAll(".aula");
+const pesquisa = document.querySelector("#barraDePesquisa");
+
+pesquisa.addEventListener("input", () => {
+
+    let valor = pesquisa.value.toLowerCase();
+
+    aulas.forEach(aula => {
+
+        let titulo = aula.querySelector(".nomes").innerText.toLowerCase();
+
+        if (titulo.includes(valor)) {
+            aula.style.display = "";
+        } else {
+            aula.style.display = "none";
+        }
+
+    });
+
+});
