@@ -54,6 +54,12 @@ header-text {
     visibility: hidden;
 }
 
+.sidebar {
+    position: fixed;
+    top: 75px;
+    width: 150px;
+}
+
 .sidebar-contents {
     grid-area: side;
     min-height: calc(100vh - 75px);
@@ -63,9 +69,7 @@ header-text {
     flex-direction: column;
     gap: 20px;
     transition: all 0.2s ease;
-    position: fixed;
-    top: 75px;
-    width: 150px;
+
 }
 
 .sidebar-contents a {
@@ -150,13 +154,16 @@ header-text {
 }
 
 .aula button {
-    z-index: 10;
     background: none;
     border: none;
     font-weight: 900;
     font-size: larger;
-    padding: 5px 10px;
+    padding: 0px 10px;
+}
+
+.aula button:hover {
     cursor: pointer;
+    font-size: 28px;
 }
 
 footer {
@@ -179,6 +186,12 @@ footer {
         position: fixed;
         width: 300px;
         height: 100vh;
+        left: -100%;
+    }
+
+    .sidebar {
+        position: fixed;
+        width: 300px;
         left: -100%;
     }
 
