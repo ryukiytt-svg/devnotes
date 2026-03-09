@@ -131,39 +131,43 @@ header-text {
     flex-flow: wrap column;
 }
 
-.aula {
-    cursor: pointer;
-    margin: 10px 0px 10px 0px;
-    border-radius: 20px;
-    padding: 5px 20px;
-    font-size: larger;
-    background-image: linear-gradient(#888888, #fff);
+.playground {
+    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.editor-area {
     display: flex;
-    font-weight: 900;
-    text-decoration: none;
+    flex-direction: column;
+    gap: 10px;
 }
 
-.aula:hover {
-    padding: 5.5px 20px;
+textarea {
+    color: #bfcadf;
+    height: 120px;
+    font-family: monospace;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #3a3a3a;
+    background-color: #0f172a;
 }
 
-.aula h2 {
-    color: #000000;
-    display: inline-block;
-    margin-right: auto;
-}
-
-.aula button {
-    background: none;
-    border: none;
-    font-weight: 900;
-    font-size: larger;
-    padding: 0px 10px;
-}
-
-.aula button:hover {
+button {
+    padding: 10px;
     cursor: pointer;
-    font-size: 28px;
+}
+.executor button {
+    width: 100%;
+
+}
+iframe {
+    width: 100%;
+    height: 350px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
 }
 
 footer {
