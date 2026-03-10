@@ -113,7 +113,20 @@ header {
     display: inline-block;
     font-size: 50px;
 }
-
+#filtroL{
+    padding: 10px;
+    border: none;
+    border-radius:5px;
+    font-size:larger;
+    font-weight:900;
+}
+#filtroV{
+    padding: 10px;
+    border: none;
+    border-radius:5px;
+    font-size:larger;
+    font-weight:900;
+}
 .container-info input {
     font-size: large;
     border-radius: 50px;
@@ -142,7 +155,7 @@ header {
     margin: 10px;
 }
 
-.aula {
+.aula_html {
     cursor: pointer;
     margin: 10px 0px 10px 0px;
     padding: 5px 20px;
@@ -169,17 +182,17 @@ header {
     background: none;
 }
 
-.aula:hover {
+.aula_html:hover {
     padding: 5.5px 20px;
 }
 
-.aula h2 {
+.aula_html h2 {
     color: #000000;
     display: inline-block;
     margin-right: auto;
 }
 
-.aula button {
+.aula_html button {
     z-index: 10;
     background: none;
     border: none;

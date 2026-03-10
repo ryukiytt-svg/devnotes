@@ -44,7 +44,7 @@ likes.forEach((botao,i) => {
         localStorage.setItem("likesSalvos", JSON.stringify(likesMemoria));     
     });
 });
-const aulas = document.querySelectorAll(".aula");
+const aulas = document.querySelectorAll(".aula_js");
 const pesquisa = document.querySelector("#barraDePesquisa");
 const itemAula = document.querySelectorAll(".item-aula")
 
@@ -65,3 +65,15 @@ pesquisa.addEventListener("input", () => {
     });
 
 });
+const vistoFiltro = document.getElementById("filtroV")
+const likeFiltro = document.getElementById("filtroL")
+
+function filtroVisto() {
+        if (botao.innerHTML === "♥️") {
+            botao.innerHTML = "♡"; 
+            likesMemoria[i] = "vazio"
+        } else {
+            botao.innerHTML = "♥️";
+            likesMemoria[i] = "cheio"
+        }
+}

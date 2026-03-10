@@ -142,7 +142,7 @@ header {
     margin: 10px;
 }
 
-.aula {
+.aula_js {
     cursor: pointer;
     margin: 10px 0px 10px 0px;
     padding: 5px 20px;
@@ -169,17 +169,17 @@ header {
     background: none;
 }
 
-.aula:hover {
+.aula_js:hover {
     padding: 5.5px 20px;
 }
 
-.aula h2 {
+.aula_js h2 {
     color: #000000;
     display: inline-block;
     margin-right: auto;
 }
 
-.aula button {
+.aula_js button {
     z-index: 10;
     background: none;
     border: none;
