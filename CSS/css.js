@@ -49,19 +49,19 @@ const pesquisa = document.querySelector("#barraDePesquisa");
 const itemAula = document.querySelectorAll(".item-aula")
 
 pesquisa.addEventListener("input", () => {
-
     let valor = pesquisa.value.toLowerCase();
 
     itemAula.forEach(aula => {
-
-        let titulo = aula.querySelector(".nomes").innerText.toLowerCase();
-
-        if (titulo.includes(valor)) {
-            aula.style.display = "flex";
-        } else {
-            aula.style.display = "none";
+        // Busca o h2, independente da classe que ele tenha
+        const h2 = aula.querySelector("h2");
+        
+        if (h2) {
+            let titulo = h2.innerText.toLowerCase();
+            if (titulo.includes(valor)) {
+                aula.style.display = "flex";
+            } else {
+                aula.style.display = "none";
+            }
         }
-
     });
-
 });
