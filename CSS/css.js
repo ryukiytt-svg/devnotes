@@ -1,10 +1,8 @@
 const menuBtn = document.getElementById("menu-btn")
-const sidebar = document.querySelector(".sidebar")
-const side = document.querySelector(".sidebar-contents")
+const sidebar = document.querySelector(".sidebar-contents")
 
 menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open")
-    side.classList.toggle("open")
 })
 
 const vistos = document.querySelectorAll(".visto")
@@ -48,17 +46,18 @@ likes.forEach((botao,i) => {
 });
 const aulas = document.querySelectorAll(".aula");
 const pesquisa = document.querySelector("#barraDePesquisa");
+const itemAula = document.querySelectorAll(".item-aula")
 
 pesquisa.addEventListener("input", () => {
 
     let valor = pesquisa.value.toLowerCase();
 
-    aulas.forEach(aula => {
+    itemAula.forEach(aula => {
 
         let titulo = aula.querySelector(".nomes").innerText.toLowerCase();
 
         if (titulo.includes(valor)) {
-            aula.style.display = "";
+            aula.style.display = "flex";
         } else {
             aula.style.display = "none";
         }

@@ -38,26 +38,29 @@ header {
     text-align: center;
 }
 
-header-text {
+.header-text {
     font-size: 34px;
     background-size: 100%;
     align-content: center;
-
 }
 
 #menu-btn {
-    margin: 5px;
     font-size: x-large;
     background-color: #1e293b;
     color: #e2e8f0;
     border: none;
     visibility: hidden;
+    z-index: 700;
+    padding: 10px;
+    text-align: start;
+}
+
+#menu-btn:hover {
+    background-color: #334155;
 }
 
 .sidebar-contents {
-    grid-area: side;
     min-height: calc(100vh - 75px);
-    /* Ocupa a tela menos o header */
     background-color: #1e293b;
     display: flex;
     flex-direction: column;
@@ -69,15 +72,18 @@ header-text {
 }
 
 .sidebar-contents a {
-    padding: 15px;
-    font-size: 20px;
+    color: #bfcadf;
     text-decoration: none;
-    color: white;
+    font-size: 23px;
+    padding: 10px;
 }
 
 .sidebar-contents a:hover {
-    background-color: #2f3d53;
-    transform: scale(1.05);
+    background-color: #334155;
+}
+
+.sidebar-contents.open {
+    left: 0;
 }
 
 #login {
@@ -127,16 +133,40 @@ header-text {
     flex-flow: wrap column;
 }
 
+.item-aula {
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-image: linear-gradient(#888888, #fff);
+    margin: 10px;
+}
+
 .aula {
     cursor: pointer;
     margin: 10px 0px 10px 0px;
-    border-radius: 20px;
     padding: 5px 20px;
     font-size: larger;
-    background-image: linear-gradient(#888888, #fff);
+    background: none;
     display: flex;
     font-weight: 900;
     text-decoration: none;
+    width: 80%;
+}
+
+.interacoes {
+    margin-left: auto;
+    background: none;
+}
+
+.interacoes button {
+    cursor: pointer;
+    padding: 5px 20px;
+    font-size: 20px;
+    background: none;
+    font-weight: 900;
+    border: none;
+    background: none;
 }
 
 .aula:hover {
@@ -166,24 +196,13 @@ footer {
     text-align: center;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
     .div-super {
         grid-template-areas:
             "header"
             "sections"
             "footer";
         grid-template-columns: 1fr;
-    }
-
-    .sidebar-contents {
-        position: fixed;
-        width: 300px;
-        height: 100vh;
-        left: -100%;
-    }
-
-    .sidebar-contents a {
-        font-size: 30px;
     }
 
     .container-info {
@@ -193,20 +212,11 @@ footer {
 
     #menu-btn {
         visibility: visible;
-        z-index: 200;
         cursor: pointer;
     }
 
     #menu-btn:hover {
         background-color: #334155;
-    }
-
-    .sidebar-contents.open {
-        left: 0;
-    }
-
-    .sidebar.open {
-        left: 0;
     }
 
     .topoText {
@@ -216,4 +226,9 @@ footer {
     .container-info input {
         width: 100%;
     }
+
+    .sidebar-contents {
+        left: -100%;
+    }
+
 }

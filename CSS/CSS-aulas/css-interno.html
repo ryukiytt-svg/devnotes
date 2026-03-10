@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aulas.css">
+    <title>Principal</title>
+</head>
+
+<body>
+
+    <div class="div-super">
+        <header class="header">
+            <button id="menu-btn">☰</button>
+            <h1 id="header-text">DevNotes</h1>
+        </header>
+        <aside class="sidebar">
+            <div class="sidebar-contents">
+                <a href="../../index.html">HTML</a>
+                <a href="../css.html">CSS</a>
+                <a href="../../JS/js.html">JS</a>
+                <a href="#">Sobre nós</a>
+                <a id="login" href="#">Faça Login</a>
+
+            </div>
+        </aside>
+        <div class="container-info">
+
+            <section class="informacoes">
+                <div class="playground">
+
+                    <div class="editor-area">
+
+                        <label>HTML</label>
+                        <textarea id="htmlCode">
+<h1>Hello DevNotes</h1>
+                </textarea>
+
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1{
+color:red;
+}
+                </textarea>
+
+                        <label>JS</label>
+                        <textarea id="jsCode">
+console.log("Hello DevNotes");
+                </textarea>
+
+
+                    </div>
+                    <div class="executor">
+                        <iframe id="resultado"></iframe>
+                        <button onclick="executarCodigo()">Executar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <h2>DevNotes</h2>
+            <H3>Anotações de um dev</H3>
+            <p>&copy;2026 Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="aulas.js"></script>
+</body>
+
+</html>
