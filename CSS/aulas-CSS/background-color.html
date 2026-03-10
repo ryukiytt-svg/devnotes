@@ -28,39 +28,38 @@
 
         <div class="container-info">
             <div class="conteudo-aula">
-                <h2>Propriedade color</h2>
-                <p>A propriedade <strong>color</strong> define a cor do texto de um elemento.</p><br>
+                <h2>Propriedade background-color</h2>
+                <p>A propriedade <strong>background-color</strong> define a cor de fundo de um elemento, como uma
+                    <code>div</code>, um <code>p</code> ou a página inteira (<code>body</code>).</p>
 
                 <h3>Como usar</h3>
-                <p>Para aplicar as cores, primeiro digitamos <code>color:</code>, depois colocamos a cor (ex:
-                    <code>red</code>) e finalizamos com <code>;</code>.
-                </p><br>
+                <p>Para mudar o fundo, escrevemos <code>background-color:</code> seguido da cor escolhida e finalizamos
+                    com <code>;</code>.</p>
 
-                <h3>Métodos para aplicar cores</h3>
-                <p>Existem diversas formas de definir uma cor no CSS. As principais são:</p><br>
+                <h3>Métodos de Cores</h3>
+                <p>Assim como na propriedade <code>color</code>, você pode usar diversos formatos:</p>
 
                 <ul>
-                    <li>
-                        <strong>1. Nome da cor:</strong> Digitando o nome em inglês, como <code>red</code>,
-                        <code>green</code> ou <code>blue</code>.
-                        <em>Nota: Existem apenas 140 cores predeterminadas, por isso é um método limitado.</em>
-                        <br>
+                    <li><strong>Nomes:</strong> <code>background-color: yellow;</code> (Simples para testes rápidos).
                     </li>
-                    <li>
-                        <strong>2. Códigos de cores:</strong> Para maior precisão, usamos sistemas como:
-                        <code>hex</code>, <code>rgb</code>, <code>rgba</code>, <code>hsl</code>, <code>hsla</code>,
-                        <code>hwb</code>, <code>lab</code>, <code>lch</code>, <code>oklab</code> e <code>oklch</code>.
-                    </li>
-                </ul><br>
-
-                <hr><br>
-
+                    <li><strong>Hexadecimal:</strong> <code>background-color: #000000;</code> (Preto).</li>
+                    <li><strong>RGB/RGBA:</strong> <code>background-color: rgba(0, 0, 255, 0.5);</code> (Azul com 50% de
+                        transparência).</li>
+                </ul>
+                <br>
+                <hr>
+                <br>
                 <h3>🛠️ Teste Agora:</h3>
+                <p>Vamos mudar o fundo da página inteira no seu playground:</p>
                 <ol>
-                    <li>Vá no campo <strong>CSS</strong>.</li>
-                    <li>Apague o <code>red</code>.</li>
-                    <li>Digite <code>hotpink</code>.</li>
+                    <li>No campo <strong>CSS</strong>, adicione este código abaixo do que já existe:</li>
+                    <code>
+        body {
+            background-color: lightgrey;
+        }
+        </code>
                     <li>Clique em <strong>Executar</strong>.</li>
+                    <li>Tente trocar <code>lightgrey</code> por <code>#121212</code> para um "Modo Escuro".</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -75,8 +74,8 @@
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-h1{
-color:red;
+body{
+background-color:red;
 }
                 </textarea>
 
