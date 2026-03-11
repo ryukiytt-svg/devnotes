@@ -104,13 +104,13 @@ function verificarFiltroLike() {
     } else {
         likeFiltro.innerHTML = "♥️"
 
-        itemAula.forEach((aula, i) => {
-            if (likesMemoria[i] === "cheio") {
-                aula.style.display = "flex"
-            } else {
-                aula.style.display = "none"
-            }
-        })
+            itemAula.forEach((aula, i) => {
+                if (likesMemoria[i] === "cheio") {
+                    aula.style.display = "flex"
+                } else {
+                    aula.style.display = "none"
+                }
+            })
     }
 }
 likeFiltro.addEventListener("click", verificarFiltroLike)

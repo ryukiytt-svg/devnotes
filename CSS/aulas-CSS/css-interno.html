@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aulas.css">
+    <link rel="stylesheet" href="inline-interno.css">
     <title>Principal</title>
 </head>
 
@@ -28,13 +28,24 @@
 
         <div class="container-info">
             <div class="conteudo-aula">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
                 <h2>CSS Interno (Embedded)</h2>
                 <p>O CSS Interno é definido dentro do próprio documento HTML, mas separado das tags, usando a tag
-                    <code>&lt;style&gt;</code>.</p><br>
+                    <code>&lt;style&gt;</code>.
+                </p><br>
 
                 <h3>Como usar</h3>
                 <p>Geralmente ele fica dentro do <code>&lt;head&gt;</code> do HTML. Você usa seletores para dizer qual
                     elemento quer mudar.</p>
+                    <br><hr><br>
+                <h3>🛠️ Teste Agora:</h3>
+                <ol>
+                    <li>No campo <strong>HTML</strong>, adicione isso acima do seu H1:</li>
+                    <code>&lt;style&gt; h1 { background-color: yellow; } &lt;/style&gt;</code>
+                    <li>Clique em <strong>Executar</strong>.</li>
+                </ol>
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -43,15 +54,19 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
+<style>
+    
+</style>
+
 <h1>Hello DevNotes</h1>
                 </textarea>
 
-                        <label>CSS</label>
+                        <label class="cssLabel">CSS</label>
                         <textarea id="cssCode">
 
                 </textarea>
 
-                        <label>JS</label>
+                        <label class="jsLabel">JS</label>
                         <textarea id="jsCode">
 console.log("Hello DevNotes");
                 </textarea>

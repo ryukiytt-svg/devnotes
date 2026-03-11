@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -25,29 +25,36 @@
 
             </div>
         </aside>
-
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
-
-                <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
-                <br><hr><br>
+                <h2>Seletores CSS</h2>
+                <p>Seletores são usados para "alvo" nos elementos HTML que queremos estilizar.</p>
+                <br>
+                <h3>Tipos de Seletores</h3>
+                <ul>
+                    <li><strong>Seletor de Tag:</strong> Afeta todas as tags daquele tipo (ex: <code>h1</code>,
+                        <code>p</code>, <code>div</code>).
+                    </li>
+                    <li><strong>Seletor de Classe (.):</strong> Usado para estilizar vários elementos diferentes. No
+                        HTML usamos <code>class="nome"</code> e no CSS <code>.nome</code>.</li>
+                    <li><strong>Seletor de ID (#):</strong> Usado para um elemento <strong>único</strong>. No HTML
+                        usamos <code>id="topo"</code> e no CSS <code>#topo</code>.</li>
+                </ul>
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li>No <strong>HTML</strong>, coloque:
+                        <code>&lt;h1 class="titulo" id="unico"&gt;Teste de Seletores&lt;/h1&gt;</code>
+                    </li>
+                    <li>No <strong>CSS</strong>, tente usar <code>h1 { color: red; }</code>, depois
+                        <code>.titulo { color: blue; }</code> e veja qual vence.
+                    </li>
+                    <li>Agora adicione <code>#unico { color: green; }</code> e veja qual vence.</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
-
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +63,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Teste de Seletores</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1{
+    
+}
+                </textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

@@ -174,17 +174,16 @@ header {
 
 textarea {
     color: #bfcadf;
-    height: 120px;
+    height: 360px;
     font-family: monospace;
     padding: 10px;
     border-radius: 6px;
     border: 1px solid #3a3a3a;
     background-color: #0f172a;
 }
-#jsCode , .jsLabel{
+#jsCode , .jsLabel , #cssCode , .cssLabel{
     display: none;
 }
-
 button {
     padding: 10px;
     cursor: pointer;

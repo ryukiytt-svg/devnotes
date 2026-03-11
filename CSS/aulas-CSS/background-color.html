@@ -15,29 +15,30 @@
             <button id="menu-btn">☰</button>
             <h1 id="header-text">DevNotes</h1>
         </header>
-        <aside class="sidebar">
-            <div class="sidebar-contents">
-                <a href="../../index.html">HTML</a>
-                <a href="../css.html">CSS</a>
-                <a href="../../JS/js.html">JS</a>
-                <a href="#">Sobre nós</a>
-                <a id="login" href="#">Faça Login</a>
-
-            </div>
+        <aside class="sidebar-contents">
+            <a href="../../index.html">HTML</a>
+            <a href="../css.html">CSS</a>
+            <a href="../../JS/js.html">JS</a>
+            <a href="#">Sobre nós</a>
+            <a id="login" href="#">Faça Login</a>
         </aside>
 
         <div class="container-info">
             <div class="conteudo-aula">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
                 <h2>Propriedade background-color</h2>
                 <p>A propriedade <strong>background-color</strong> define a cor de fundo de um elemento, como uma
-                    <code>div</code>, um <code>p</code> ou a página inteira (<code>body</code>).</p>
+                    <code>div</code>, um <code>p</code> ou a página inteira (<code>body</code>).
+                </p><br>
 
                 <h3>Como usar</h3>
                 <p>Para mudar o fundo, escrevemos <code>background-color:</code> seguido da cor escolhida e finalizamos
-                    com <code>;</code>.</p>
+                    com <code>;</code>.</p><br>
 
                 <h3>Métodos de Cores</h3>
-                <p>Assim como na propriedade <code>color</code>, você pode usar diversos formatos:</p>
+                <p>Assim como na propriedade <code>color</code>, você pode usar diversos formatos:</p><br>
 
                 <ul>
                     <li><strong>Nomes:</strong> <code>background-color: yellow;</code> (Simples para testes rápidos).
@@ -68,18 +69,15 @@
                     <div class="editor-area">
 
                         <label>HTML</label>
-                        <textarea id="htmlCode">
-<h1>Hello DevNotes</h1>
-                </textarea>
+                        <textarea id="htmlCode"><h1>Hello DevNotes</h1></textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
 body{
 background-color:red;
-}
-                </textarea>
+}</textarea>
 
-                        <label>JS</label>
+                        <label class="jsLabel">JS</label>
                         <textarea id="jsCode">
 console.log("Hello DevNotes");
                 </textarea>

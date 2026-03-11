@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -29,25 +29,26 @@
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
-                    <a href="../css.html">Back</a>
-                </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
+                <a href="../css.html">Back</a></div>
+                <h2>Propriedade padding</h2>
+                <p>O <strong>padding</strong> é o espaço <strong>interno</strong> da caixa. Ele cria uma distância entre
+                    o texto e a borda.</p><br>
 
                 <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
+                <p>Você pode definir para todos os lados ou individualmente:</p>
+                <ul>
+                    <li><code>padding: 20px;</code> (Todos os lados)</li>
+                    <li><code>padding-top: 10px;</code> (Apenas topo)</li>
+                </ul>
+
+
                 <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li>Adicione uma borda ao seu <code>h1</code> para conseguir enxergar o espaço.</li>
+                    <li>No <strong>CSS</strong>, coloque: <code>padding: 30px;</code>.</li>
+                    <li>Note como o "balão" do título cresce para dentro!</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
-
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +57,17 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Teste de Padding</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1 {
+    background-color: red;
+    color: white;
+
+}
+                </textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -25,29 +25,37 @@
 
             </div>
         </aside>
-
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
+                <h2>Especificidade</h2>
+                <p>Quando dois seletores tentam aplicar cores diferentes ao mesmo elemento, o navegador precisa decidir
+                    quem vence. Isso é a <strong>especificidade</strong>.</p><br>
 
-                <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
-                <br><hr><br>
-                <h3>🛠️ Teste Agora:</h3>
+                <h3>A Regra de Ouro (Quem ganha?)</h3>
+                <p>Existe uma hierarquia de "peso". O mais pesado sempre vence:</p><br>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li><strong>Style Inline</strong> (O mais forte de todos)</li>
+                    <li><strong>ID (#)</strong></li>
+                    <li><strong>Classe (.)</strong></li>
+                    <li><strong>Tag (h1, p)</strong> (O mais fraco)</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
+                <br>
+                <hr><br>
 
+
+                <h3>🛠️ Teste Agora:</h3>
+                <p>Vamos ver a briga de forças no seu playground:</p>
+                <ol>
+                    <li>No <strong>CSS</strong>, coloque:
+                        <br><code>h1 { color: red; }</code> (Tag)
+                        <br><code>.titulo { color: green; }</code> (Classe)
+                    </li>
+                    <li>No <strong>HTML</strong> use: <code>&lt;h1 class="titulo"&gt;Quem vence?&lt;/h1&gt;</code></li>
+                    <li>O texto ficará <strong>Verde</strong>, pois a Classe é mais específica que a Tag!</li>
+                </ol>
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +64,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Teste de Especificidade</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1{
+    
+}
+                </textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

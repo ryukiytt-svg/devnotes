@@ -8,14 +8,14 @@ menuBtn.addEventListener("click", () => {
 const vistos = document.querySelectorAll(".visto")
 
 let vistosMemoria = JSON.parse(localStorage.getItem("vistosSalvos")) || [];
-vistos.forEach((botao,i) => {
+vistos.forEach((botao, i) => {
 
     if (vistosMemoria[i] === "cheio") {
         botao.innerHTML = "⬤"
     }
     botao.addEventListener("click", () => {
         if (botao.innerHTML === "⬤") {
-            botao.innerHTML = "◯"; 
+            botao.innerHTML = "◯";
             vistosMemoria[i] = "vazio"
         } else {
             botao.innerHTML = "⬤";
@@ -28,20 +28,20 @@ vistos.forEach((botao,i) => {
 const likes = document.querySelectorAll(".like")
 
 let likesMemoria = JSON.parse(localStorage.getItem("likesSalvos")) || [];
-likes.forEach((botao,i) => {
+likes.forEach((botao, i) => {
 
     if (likesMemoria[i] === "cheio") {
         botao.innerHTML = "♥️"
     }
     botao.addEventListener("click", () => {
         if (botao.innerHTML === "♥️") {
-            botao.innerHTML = "♡"; 
+            botao.innerHTML = "♡";
             likesMemoria[i] = "vazio"
         } else {
             botao.innerHTML = "♥️";
             likesMemoria[i] = "cheio"
         }
-        localStorage.setItem("likesSalvos", JSON.stringify(likesMemoria));     
+        localStorage.setItem("likesSalvos", JSON.stringify(likesMemoria));
     });
 });
 const aulas = document.querySelectorAll(".aula_js");
@@ -63,17 +63,55 @@ pesquisa.addEventListener("input", () => {
         }
 
     });
-
+    likeFiltro.innerHTML = "♡"
+    vistoFiltro.innerHTML = "◯"
 });
-const vistoFiltro = document.getElementById("filtroV")
 const likeFiltro = document.getElementById("filtroL")
+const vistoFiltro = document.getElementById("filtroV")
 
-function filtroVisto() {
-        if (botao.innerHTML === "♥️") {
-            botao.innerHTML = "♡"; 
-            likesMemoria[i] = "vazio"
-        } else {
-            botao.innerHTML = "♥️";
-            likesMemoria[i] = "cheio"
-        }
+function verificarFiltroVisto() {
+
+    if (vistoFiltro.innerHTML === "⬤") {
+        vistoFiltro.innerHTML = "◯"
+
+        itemAula.forEach((aula) => {
+            aula.style.display = "flex"
+        })
+
+    } else {
+        vistoFiltro.innerHTML = "⬤"
+
+        itemAula.forEach((aula, i) => {
+            if (vistosMemoria[i] === "cheio") {
+                aula.style.display = "flex"
+            } else {
+                aula.style.display = "none"
+            }
+        })
+    }
 }
+vistoFiltro.addEventListener("click", verificarFiltroVisto)
+
+function verificarFiltroLike() {
+
+    if (likeFiltro.innerHTML === "♥️") {
+        likeFiltro.innerHTML = "♡"
+
+        itemAula.forEach((aula) => {
+            aula.style.display = "flex"
+        })
+
+    } else {
+        likeFiltro.innerHTML = "♥️"
+
+        itemAula.forEach((aula, i) => {
+            if (likesMemoria[i] === "cheio") {
+                aula.style.display = "flex"
+            } else {
+                aula.style.display = "none"
+            }
+        })
+    }
+}
+likeFiltro.addEventListener("click", verificarFiltroLike)
+

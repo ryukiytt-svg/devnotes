@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -29,25 +29,23 @@
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
-                    <a href="../css.html">Back</a>
-                </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
+                <a href="../css.html">Back</a></div>
+                <h2>Propriedade border-radius</h2>
+                <p>Essa propriedade serve para arredondar os cantos das bordas ou do fundo de um elemento.</p><br>
 
                 <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
+                <p>Quanto maior o valor, mais redondo o canto fica:</p><br>
+                <ul>
+                    <li><code>border-radius: 10px;</code> (Cantos levemente arredondados)</li>
+                    <li><code>border-radius: 50%;</code> (Transforma um quadrado em um círculo)</li>
+                </ul>
                 <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li>No <strong>CSS</strong>, adicione ao seu elemento:</li>
+                    <code>background-color: orange; border-radius: 20px; padding: 10px;</code>
+                    <li>Tente mudar para <code>50px</code> e veja a diferença.</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
-
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +54,18 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Teste de Border-radius</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1 {
+    background-color: orange;
+    color: white;
+    padding: 10px;
+
+}
+</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -31,23 +31,22 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
-
+                <h2>Propriedade border</h2>
+                <p>A <strong>border</strong> é a linha que envolve o conteúdo e o preenchimento de um elemento.</p>
+                <br>
                 <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
-                <br><hr><br>
+                <p>Para definir uma borda, precisamos de 3 valores: <strong>largura</strong>, <strong>estilo</strong> e
+                    <strong>cor</strong>.
+                </p>
+                <code>border: 2px solid red;</code><br>
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li>No <strong>CSS</strong>, adicione ao seu <code>h1</code>:</li>
+                    <code>border: 5px dashed blue;</code>
+                    <li>Clique em <strong>Executar</strong> e veja a borda tracejada.</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
-
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +55,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Hello DevNotes</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1{
+    
+}
+                </textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

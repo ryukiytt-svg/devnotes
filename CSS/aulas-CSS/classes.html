@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="inline-interno.css">
+    <link rel="stylesheet" href="aulas.css">
     <title>Principal</title>
 </head>
 
@@ -25,29 +25,27 @@
 
             </div>
         </aside>
-
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>CSS Inline</h2>
-                <p>O CSS Inline é aplicado <strong>diretamente na tag HTML</strong> usando o atributo
-                    <code>style</code>.
-                </p><br>
+                <h2>Trabalhando com Classes</h2>
+                <p>Classes são a melhor forma de organizar seu CSS, pois você pode repetir a mesma classe em vários
+                    elementos.</p><br>
 
                 <h3>Como usar</h3>
-                <p>Dentro da tag que você quer estilizar, você escreve <code>style="propriedade: valor;"</code>.</p>
-                <br><hr><br>
+                <p>No HTML, você pode colocar mais de uma classe no mesmo elemento separando por espaço:</p>
+                <code>&lt;p class="texto-grande negrito"&gt;Meu parágrafo&lt;/p&gt;</code><br>
+                <br>
+                <hr><br>
+
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No campo <strong>HTML</strong>, mude a sua tag para:</li>
-                    <code>&lt;h1 style="color: blue;"&gt;Texto Azul&lt;/h1&gt;</code>
-                    <li>Clique em <strong>Executar</strong>.</li>
+                    <li>Crie duas tags <code>&lt;p&gt;</code> no HTML com a <code>class="destaque"</code>.</li>
+                    <li>No CSS, defina: <code>.destaque { background: yellow; padding: 10px; }</code>.</li>
+                    <li>Note que ambos os parágrafos mudam ao mesmo tempo!</li>
                 </ol>
-                <p><em>Nota: Este método é pouco usado pois mistura código com design, dificultando a manutenção.</em>
-                </p>
-
             </div>
             <section class="informacoes">
                 <div class="playground">
@@ -56,12 +54,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste</h1>
-                        </textarea>
+<h1>Teste de Classes</h1>
+                </textarea>
 
-                        <label class="cssLabel">CSS</label>
-                        <textarea id="cssCode">  
-                        </textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+h1{
+    
+}
+                </textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

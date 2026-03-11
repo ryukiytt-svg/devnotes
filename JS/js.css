@@ -113,6 +113,20 @@ header {
     display: inline-block;
     font-size: 50px;
 }
+#filtroL{
+    padding: 10px;
+    border: none;
+    border-radius:5px;
+    font-size:larger;
+    font-weight:900;
+}
+#filtroV{
+    padding: 10px;
+    border: none;
+    border-radius:5px;
+    font-size:larger;
+    font-weight:900;
+}
 
 .container-info input {
     font-size: large;
