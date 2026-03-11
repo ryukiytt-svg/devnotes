@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Border-Radius</title>
+    <title>Width-Height</title>
 </head>
 
 <body>
@@ -15,36 +15,37 @@
             <button id="menu-btn">☰</button>
             <h1 id="header-text">DevNotes</h1>
         </header>
-        <aside class="sidebar">
-            <div class="sidebar-contents">
-                <a href="../../index.html">HTML</a>
-                <a href="../css.html">CSS</a>
-                <a href="../../JS/js.html">JS</a>
-                <a href="#">Sobre nós</a>
-                <a id="login" href="#">Faça Login</a>
-
-            </div>
+        <aside class="sidebar-contents">
+            <a href="../../index.html">HTML</a>
+            <a href="../css.html">CSS</a>
+            <a href="../../JS/js.html">JS</a>
+            <a href="#">Sobre nós</a>
+            <a id="login" href="#">Faça Login</a>
         </aside>
 
         <div class="container-info">
             <div class="conteudo-aula">
                 <div class="back">
-                <a href="../css.html">Back</a></div>
-                <h2>Propriedade border-radius</h2>
-                <p>Essa propriedade serve para arredondar os cantos das bordas ou do fundo de um elemento.</p><br>
+                    <a href="../css.html">Back</a>
+                </div>
+                <h2>Width e Height</h2>
+                <p>Essas propriedades definem o tamanho da "caixa" do seu elemento.</p><br>
 
                 <h3>Como usar</h3>
-                <p>Quanto maior o valor, mais redondo o canto fica:</p><br>
                 <ul>
-                    <li><code>border-radius: 10px;</code> (Cantos levemente arredondados)</li>
-                    <li><code>border-radius: 50%;</code> (Transforma um quadrado em um círculo)</li>
+                    <li><strong>Width:</strong> Define a largura (ex: <code>width: 300px;</code> ou
+                        <code>width: 50%;</code>).</li>
+                    <li><strong>Height:</strong> Define a altura (ex: <code>height: 100px;</code>).</li>
                 </ul>
+
+
                 <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>CSS</strong>, adicione ao seu elemento:</li>
-                    <code>background-color: orange; border-radius: 20px; padding: 10px;</code>
-                    <li>Tente mudar para <code>50px</code> e veja a diferença.</li>
+                    <li>No <strong>CSS</strong>, defina um fundo para o seu <code>h1</code> para ver o tamanho dele.
+                    </li>
+                    <li>Adicione: <code>width: 200px; height: 200px;</code>.</li>
+                    <li>Note que o texto pode "transbordar" se a caixa for muito pequena para ele.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -54,18 +55,16 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Teste de Border-radius</h1>
-                </textarea>
+<h1>Hello DevNotes</h1>
+</textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-h1 {
-    background-color: orange;
-    color: white;
-    padding: 10px;
-
-}
-</textarea>
+h1{
+ background-color:gray;
+ 
+ 
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

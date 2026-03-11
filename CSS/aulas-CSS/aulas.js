@@ -5,15 +5,15 @@ menuBtn.addEventListener("click", () => {
     sidebar.classList.toggle("open")
 })
 
-function executarCodigo(){
+function executarCodigo() {
 
-const html = document.getElementById("htmlCode").value
-const css = document.getElementById("cssCode").value
-const js = document.getElementById("jsCode").value
+    const html = document.getElementById("htmlCode").value
+    const css = document.getElementById("cssCode").value
+    const js = document.getElementById("jsCode").value
 
-const frame = document.getElementById("resultado")
+    const frame = document.getElementById("resultado")
 
-const codigoFinal = `
+    const codigoFinal = `
 <html>
 <head>
 <style>${css}</style>
@@ -30,6 +30,13 @@ ${js}
 </html>
 `
 
-frame.srcdoc = codigoFinal
+    frame.srcdoc = codigoFinal
 
+};
+
+function passarPaginas() {
+    let aula = document.querySelector(".pagina1")
+    let aula1 = document.querySelector(".pagina2")
+    aula.classList.toggle("open")
+    aula1.classList.toggle("open")
 }

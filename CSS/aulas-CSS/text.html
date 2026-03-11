@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="aulas.css">
-    <title>Color</title>
+    <link rel="stylesheet" href="paginas.css">
+    <title>Text</title>
 </head>
 
 <body>
@@ -15,25 +15,22 @@
             <button id="menu-btn">☰</button>
             <h1 id="header-text">DevNotes</h1>
         </header>
-        <aside class="sidebar">
-            <div class="sidebar-contents">
-                <a href="../../index.html">HTML</a>
-                <a href="../css.html">CSS</a>
-                <a href="../../JS/js.html">JS</a>
-                <a href="#">Sobre nós</a>
-                <a id="login" href="#">Faça Login</a>
-
-            </div>
+        <aside class="sidebar-contents">
+            <a href="../../index.html">HTML</a>
+            <a href="../css.html">CSS</a>
+            <a href="../../JS/js.html">JS</a>
+            <a href="#">Sobre nós</a>
+            <a id="login" href="#">Faça Login</a>
         </aside>
 
         <div class="container-info">
-            <div class="conteudo-aula">
+            <div class="conteudo-aula pagina1">
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
                 <h2>Alinhamento de Texto</h2>
                 <p>A propriedade <strong>text-align</strong> controla como o texto se posiciona horizontalmente dentro
-                    da caixa.</p>
+                    da caixa.</p><br>
 
                 <h3>Valores comuns</h3>
                 <ul>
@@ -41,7 +38,8 @@
                     <li><code>center</code>: Centraliza o texto.</li>
                     <li><code>right</code>: Alinha à direita.</li>
                     <li><code>justify</code>: Estica o texto para ocupar toda a largura.</li>
-                </ul>
+                </ul><br>
+                <hr><br>
 
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
@@ -49,7 +47,6 @@
                     <li>Aumente a <code>width</code> para <code>100%</code> e veja o título ir para o meio da tela.</li>
                 </ol>
             </div>
-
             <section class="informacoes">
                 <div class="playground">
 
@@ -63,7 +60,7 @@
                         <label>CSS</label>
                         <textarea id="cssCode">
 h1{
-    
+color:red;
 }
                 </textarea>
 
@@ -78,15 +75,43 @@ console.log("Hello DevNotes");
                         <iframe id="resultado"></iframe>
                         <button onclick="executarCodigo()">Executar</button>
                     </div>
+                </div><br>
+
+                <div class="conjunto-footer">
+                    <button onclick="passarPaginas()" class="voltar">BACK</button>
+                    <button onclick="passarPaginas()" class="next">NEXT</button>
                 </div>
             </section>
+
         </div>
-    </div>
-    <footer>
-        <h2>DevNotes</h2>
-        <H3>Anotações de um dev</H3>
-        <p>&copy;2026 Todos os direitos reservados</p>
-    </footer>
+
+        <div class="container-info_a">
+            <div class="conteudo-aula pagina2">
+                <h2>Estilização de Texto</h2>
+                <p>Podemos transformar o texto e adicionar ou remover decorações (como sublinhados).</p>
+
+                <h3>Propriedades</h3>
+                <ul>
+                    <li><strong>text-decoration:</strong> Usado para colocar <code>underline</code> (sublinhado) ou
+                        remover o sublinhado de links com <code>none</code>.</li>
+                    <li><strong>text-transform:</strong> Transforma o texto em <code>uppercase</code> (MAIÚSCULAS) ou
+                        <code>lowercase</code> (minúsculas).</li>
+                </ul>
+
+                <h3>🛠️ Teste Agora:</h3>
+                <ol>
+                    <li>No seu <strong>CSS</strong>, adicione:</li>
+                    <code>text-transform: uppercase; text-decoration: underline;</code>
+                    <li>Clique em <strong>Executar</strong>.</li>
+                </ol>
+            </div>
+
+        </div>
+        <footer>
+            <h2>DevNotes</h2>
+            <H3>Anotações de um dev</H3>
+            <p>&copy;2026 Todos os direitos reservados</p>
+        </footer>
     </div>
 
     <script src="aulas.js"></script>
