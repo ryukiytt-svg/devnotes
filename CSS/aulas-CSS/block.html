@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aulas.css">
+    <title>Font</title>
+</head>
+
+<body>
+
+    <div class="div-super">
+        <header class="header">
+            <button id="menu-btn">☰</button>
+            <h1 id="header-text">DevNotes</h1>
+        </header>
+        <aside class="sidebar">
+            <div class="sidebar-contents">
+                <a href="../../index.html">HTML</a>
+                <a href="../css.html">CSS</a>
+                <a href="../../JS/js.html">JS</a>
+                <a href="#">Sobre nós</a>
+                <a id="login" href="#">Faça Login</a>
+
+            </div>
+        </aside>
+
+        <div class="container-info">
+            <div class="conteudo-aula">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
+                <h2>Display: Block</h2>
+                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
+                    sempre começam em uma nova linha.</p><br>
+
+                <h3>Características</h3>
+                <ul>
+                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
+                    </li>
+                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
+                        <code>&lt;p&gt;</code>.</li>
+                </ul><br><hr><br>
+
+
+
+                <h3>🛠️ Teste Agora:</h3>
+                <ol>
+                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
+                    </li>
+                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                </ol>
+            </div>
+            <section class="informacoes">
+                <div class="playground">
+
+                    <div class="editor-area">
+
+                        <label>HTML</label>
+                        <textarea id="htmlCode">
+<div class="div1">
+    Primeira div
+</div>
+
+<div class="div2">
+    Segunda div
+</div>
+                </textarea>
+
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+.div1{
+ 
+}
+.div2{
+ 
+}
+                </textarea>
+
+                        <label class="jsLabel">JS</label>
+                        <textarea id="jsCode">
+console.log("Hello DevNotes");
+                </textarea>
+
+
+                    </div>
+                    <div class="executor">
+                        <iframe id="resultado"></iframe>
+                        <button onclick="executarCodigo()">Executar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <h2>DevNotes</h2>
+            <H3>Anotações de um dev</H3>
+            <p>&copy;2026 Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="aulas.js"></script>
+</body>
+
+</html>
