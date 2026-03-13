@@ -35,8 +35,27 @@ ${js}
 };
 
 function passarPaginas() {
-    let aula = document.querySelector(".pagina1")
-    let aula1 = document.querySelector(".pagina2")
-    aula.classList.toggle("open")
-    aula1.classList.toggle("open")
+    let aula = document.querySelector(".pagina1");
+    let aula1 = document.querySelector(".pagina2");
+    let proximo = document.querySelector(".next");
+    let voltar = document.querySelector(".voltar")
+
+    aula.classList.toggle("open");
+    aula1.classList.toggle("open");
+
+    voltar.classList.toggle("open");
+    proximo.classList.toggle("open");
 }
+const AbrirOverlay = document.querySelector(".exemplos");
+const overlay = document.querySelector(".overlay");
+const FecharOverlay = document.querySelector(".fecharOverlay");
+
+function overlayOpen() {
+    overlay.classList.toggle("open")
+}
+AbrirOverlay.addEventListener("click",overlayOpen)
+
+function overlayClose() {
+    overlay.classList.toggle("open")
+}
+FecharOverlay.addEventListener("click",overlayClose)

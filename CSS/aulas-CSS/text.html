@@ -54,13 +54,13 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<h1>Hello DevNotes</h1>
+<h1>Texto</h1>
                 </textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
 h1{
-color:red;
+    color : red ;
 }
                 </textarea>
 
@@ -87,16 +87,23 @@ console.log("Hello DevNotes");
 
         <div class="container-info_a">
             <div class="conteudo-aula pagina2">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
                 <h2>Estilização de Texto</h2>
-                <p>Podemos transformar o texto e adicionar ou remover decorações (como sublinhados).</p>
+                <p>Podemos transformar o texto e adicionar ou remover decorações (como sublinhados).</p><br>
 
                 <h3>Propriedades</h3>
                 <ul>
                     <li><strong>text-decoration:</strong> Usado para colocar <code>underline</code> (sublinhado) ou
-                        remover o sublinhado de links com <code>none</code>.</li>
+                        remover o sublinhado de links com <code>none</code>. <button class="exemplos">Exemplos</button>
+
+                    </li>
                     <li><strong>text-transform:</strong> Transforma o texto em <code>uppercase</code> (MAIÚSCULAS) ou
-                        <code>lowercase</code> (minúsculas).</li>
-                </ul>
+                        <code>lowercase</code> (minúsculas).
+                    </li>
+                </ul><br>
+                <hr><br>
 
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
@@ -113,7 +120,15 @@ console.log("Hello DevNotes");
             <p>&copy;2026 Todos os direitos reservados</p>
         </footer>
     </div>
-
+    <div class="overlay">
+        <h2>Exemplos de Valores</h2><br>
+        <h3>none: Remove qualquer decoração existente.</h3>
+        <h3>underline: Desenha uma linha abaixo do texto (padrão para links).</h3>
+        <h3>overline: Desenha uma linha acima do texto.</h3>
+        <h3>line-through: Desenha uma linha no meio do texto (riscado).</h3>
+        <h3>blink: Faz o texto piscar (descontinuado, não suportado por navegadores modernos).</h3>
+        <div class="containerOcupacao"><button class="fecharOverlay">Fechar</button></div>
+    </div>
     <script src="aulas.js"></script>
 </body>
 
