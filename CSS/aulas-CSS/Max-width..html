@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Max-width</title>
 </head>
 
 <body>
@@ -31,25 +31,19 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h2>Max-width</h2>
+                <p>Diferente do <code>width</code> fixo, o <strong>max-width</strong> define um limite máximo, mas
+                    permite que o elemento diminua se a tela for menor que ele.</p>
+                    <br>
+                <h3>Por que usar?</h3>
+                <p>É essencial para sites que funcionam no celular. Se você usa <code>width: 1000px</code>, o site terá
+                    barra de rolagem no celular. Com <code>max-width: 1000px; width: 100%;</code>, ele se adapta.</p>
+                    <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
-                    </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>No <strong>CSS</strong>, crie uma div com <code>background: red; height: 100px;</code>.</li>
+                    <li>Coloque <code>width: 800px;</code> e veja que ela fica gigante.</li>
+                    <li>Troque para <code>max-width: 800px;</code>. Note que ela respeita o limite máximo.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +53,14 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
-
+<div>Teste</div></textarea>
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
-}
-.div2{
- 
-}
-                </textarea>
+div {
+
+
+background-color: red; 
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

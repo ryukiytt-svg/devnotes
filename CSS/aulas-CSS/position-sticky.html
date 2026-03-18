@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Position Sticky</title>
 </head>
 
 <body>
@@ -31,25 +31,17 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h2>Position: Sticky</h2>
+                <p>O <code>sticky</code> (pegajoso) é um híbrido. Ele se comporta como <code>relative</code> até que
+                    você role a página e ele atinja uma posição específica, aí ele vira <code>fixed</code>.</p>
+                    <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
-                    </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>Crie uma lista longa de itens no HTML.</li>
+                    <li>No meio dela, coloque um <code>h2</code> com:
+                        <code>position: sticky; top: 0; background: yellow;</code>.</li>
+                    <li>Ao rolar (scroll), o título "gruda" no topo quando chega lá e só desgruda quando a seção dele
+                        acaba.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +51,11 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
+</textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
-}
-.div2{
- 
-}
-                </textarea>
+</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

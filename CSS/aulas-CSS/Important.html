@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>!Important</title>
 </head>
 
 <body>
@@ -31,25 +31,22 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
+                <h2>O uso do !important</h2>
+                <p>O <code>!important</code> é uma "marreta" que quebra todas as regras de especificidade. Ele força um
+                    estilo a ser aplicado, não importa o quê.</p><br>
 
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h3>Quando usar?</h3>
+                <p><strong>Dica de ouro:</strong> Use o menos possível! Ele dificulta a manutenção do código. É usado
+                    apenas em casos extremos onde você não consegue sobrescrever um estilo de outra forma.</p>
+                    <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
+                    <li>No <strong>CSS</strong>, coloque:
+                        <br><code>h1 { color: blue !important; }</code>
+                        <br><code>#unico { color: red; }</code>
                     </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>Mesmo o ID sendo mais forte, o <code>!important</code> fará o texto ficar <strong>azul</strong>.
+                    </li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,22 +56,16 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
+<h1 id="unico">Teste</h1>
                 </textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
+h1 {
+
 }
-.div2{
- 
+#unico {
+
 }
                 </textarea>
 

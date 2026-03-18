@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Position Relative</title>
 </head>
 
 <body>
@@ -31,25 +31,27 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
+                <h2>Position: Relative</h2>
+                <p>O <code>relative</code> é o posicionamento mais "seguro". Ele mantém o elemento no fluxo natural da
+                    página, mas permite que você o mova um pouco usando <code>top</code>, <code>bottom</code>,
+                    <code>left</code> ou <code>right</code>.</p>
+                    <br>
+                <h3>O que acontece?</h3>
                 <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                    <li>O elemento <strong>não sai</strong> do lugar original dele para os outros vizinhos.</li>
+                    <li>Ele apenas ganha um "offset" (deslocamento).</li>
+                    <li>Ele serve de "âncora" para elementos <code>absolute</code> (veremos na próxima aula).</li>
+                </ul>
+                <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
+                    <li>Crie três <code>div</code> coloridas no HTML.</li>
+                    <li>No <strong>CSS</strong> da segunda div, coloque:
+                        <br><code>position: relative;</code>
+                        <br><code>top: 20px; left: 30px;</code>
                     </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>Note que ela se move, mas as outras divs continuam no mesmo lugar, como se a segunda ainda
+                        estivesse lá.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +61,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
+<div class="div1">1</div>
+<div class="div2">2</div>
+<div class="div3">3</div></textarea>
 
                         <label>CSS</label>
-                        <textarea id="cssCode">
-.div1{
- 
-}
-.div2{
- 
-}
-                </textarea>
+<textarea id="cssCode">
+.div2 {
+
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Position Fixed</title>
 </head>
 
 <body>
@@ -31,25 +31,19 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h2>Position: Fixed</h2>
+                <p>O <code>fixed</code> ignora todo mundo e se prende à **janela do navegador** (viewport). Ele não liga
+                    para quem é o pai dele.</p>
+                    <br>
+                <h3>Onde usamos?</h3>
+                <p>Sabe aquele botão de "Voltar ao topo" ou um menu que não some quando você rola a página? É o Fixed!
+                </p>
+                <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
-                    </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>No <strong>CSS</strong>, coloque no seu <code>h1</code>:</li>
+                    <code>position: fixed; top: 0; left: 0; width: 100%; background: black; color: white;</code>
+                    <li>Agora tente imaginar a página com muito texto: o título nunca sairia do topo da sua visão.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +53,17 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
+<h1></h1></textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
+h1 {
+    
 }
-.div2{
- 
-}
-                </textarea>
+
+body {
+height: 900px;
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

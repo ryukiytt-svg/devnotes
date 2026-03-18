@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Position Absolute</title>
 </head>
 
 <body>
@@ -31,25 +31,22 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h2>Position: Absolute</h2>
+                <p>O <code>absolute</code> é onde a mágica (e a confusão) acontece. Ele remove o elemento do fluxo da
+                    página. É como se ele ganhasse "asas" e flutuasse sobre os outros.</p>
+                    <br>
+                <h3>A Regra de Ouro</h3>
+                <p>Um elemento <strong>Absolute</strong> sempre procura o pai mais próximo que tenha
+                    <code>position: relative</code>. Se não achar nenhum, ele se posiciona em relação à tela inteira.
+                </p>
+                <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
+                    <li>Crie uma <code>div</code> grande (o pai) com <code>position: relative; height: 200px;</code>.
                     </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>Dentro dela, crie uma <code>div</code> pequena (o filho) com
+                        <code>position: absolute; bottom: 0; right: 0;</code>.</li>
+                    <li>Veja como o filho "gruda" no canto inferior direito do pai!</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +56,19 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
+<div class="divPai">
+    <div>1</div>
 </div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
+</textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
+.divPai {
+
 }
-.div2{
- 
-}
-                </textarea>
+.divPai div{
+   
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

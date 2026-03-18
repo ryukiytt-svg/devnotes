@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Display Block</title>
+    <title>Box-Shadow</title>
 </head>
 
 <body>
@@ -31,25 +31,23 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Display: Block</h2>
-                <p>Elementos "Block" são egoístas: eles ocupam <strong>toda a largura disponível</strong> (100%) e
-                    sempre começam em uma nova linha.</p><br>
-
-                <h3>Características</h3>
-                <ul>
-                    <li>Respeitam <code>width</code>, <code>height</code>, <code>margin</code> e <code>padding</code>.
-                    </li>
-                    <li>Exemplos de tags padrão block: <code>&lt;div&gt;</code>, <code>&lt;h1&gt;</code>,
-                        <code>&lt;p&gt;</code>.</li>
-                </ul><br><hr><br>
-
-
-
+                <h2>Box Shadow</h2>
+                <p>A <strong>box-shadow</strong> adiciona profundidade ao layout, criando sombras atrás dos elementos
+                    (como cards e botões).</p>
+                <br>
+                <h3>Como usar</h3>
+                <p>A ordem dos valores é: <code>deslocamento-x</code>, <code>deslocamento-y</code>,
+                    <code>desfoque</code> e <code>cor</code>.
+                </p>
+                <code>box-shadow: 10px 10px 20px rgba(0,0,0,0.5);</code> <br>
+                <br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>No <strong>HTML</strong>, coloque duas <code>&lt;div&gt;</code> com cores de fundo diferentes.
+                    <li>No <strong>CSS</strong>, crie um quadrado:
+                        <code>width: 100px; height: 100px; background: white;</code>.
                     </li>
-                    <li>Note que, mesmo sendo pequenas, uma fica embaixo da outra.</li>
+                    <li>Adicione: <code>box-shadow: 0 4px 8px rgba(0,0,0,0.2);</code>.</li>
+                    <li>Veja como ele parece "flutuar" sobre o fundo.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -59,24 +57,15 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div class="div1">
-    Primeira div
-</div>
-
-<div class="div2">
-    Segunda div
-</div>
-                </textarea>
+<div>Teste</div></textarea>
 
                         <label>CSS</label>
                         <textarea id="cssCode">
-.div1{
- 
-}
-.div2{
- 
-}
-                </textarea>
+div {
+
+width: 100px;
+height: 100px;   
+}</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

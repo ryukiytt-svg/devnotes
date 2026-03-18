@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aulas.css">
+    <title>Display Inline</title>
+</head>
+
+<body>
+
+    <div class="div-super">
+        <header class="header">
+            <button id="menu-btn">☰</button>
+            <h1 id="header-text">DevNotes</h1>
+        </header>
+        <aside class="sidebar">
+            <div class="sidebar-contents">
+                <a href="../../index.html">HTML</a>
+                <a href="../css.html">CSS</a>
+                <a href="../../JS/js.html">JS</a>
+                <a href="#">Sobre nós</a>
+                <a id="login" href="#">Faça Login</a>
+
+            </div>
+        </aside>
+
+        <div class="container-info">
+            <div class="conteudo-aula">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
+                    <h2>Display: Inline</h2>
+                    <p>Elementos "Inline" são sociáveis: eles ocupam apenas o espaço <strong>necessário</strong> para o
+                        seu conteúdo e permitem que outros elementos fiquem ao seu lado.</p><br>
+
+                    <h3>Características</h3>
+                    <ul>
+                        <li><strong>Não</strong> aceitam <code>width</code> nem <code>height</code>.</li>
+                        <li>Margens e paddings laterais funcionam, mas os verticais não empurram outros elementos.</li>
+                        <li>Exemplos: <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>, <code>&lt;strong&gt;</code>.
+                        </li>
+                    </ul><br><hr><br>
+
+                    <h3>🛠️ Teste Agora:</h3>
+                    <ol>
+                        <li>No <strong>HTML</strong>, crie três <code>&lt;span&gt;</code>.</li>
+                        <li>No <strong>CSS</strong>, tente dar um <code>width: 500px;</code> para eles.</li>
+                        <li>Veja que nada acontece! O tamanho deles é travado no texto.</li>
+                    </ol>
+                </div>
+                <section class="informacoes">
+                    <div class="playground">
+
+                        <div class="editor-area">
+
+                            <label>HTML</label>
+                            <textarea id="htmlCode">
+
+                </textarea>
+
+                            <label>CSS</label>
+                            <textarea id="cssCode">
+span {
+
+}
+                </textarea>
+
+                            <label class="jsLabel">JS</label>
+                            <textarea id="jsCode">
+console.log("Hello DevNotes");
+                </textarea>
+
+
+                        </div>
+                        <div class="executor">
+                            <iframe id="resultado"></iframe>
+                            <button onclick="executarCodigo()">Executar</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <footer>
+                <h2>DevNotes</h2>
+                <H3>Anotações de um dev</H3>
+                <p>&copy;2026 Todos os direitos reservados</p>
+            </footer>
+        </div>
+
+        <script src="aulas.js"></script>
+</body>
+
+</html>
