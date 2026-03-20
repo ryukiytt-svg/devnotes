@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Overflow</title>
 </head>
 
 <body>
@@ -31,22 +31,33 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
-                <br>
+                <h2>Overflow</h2>
+                <p>O <strong>Overflow</strong> decide o que acontece quando o conteúdo (texto ou imagem) é maior que a
+                    caixa que o contém. Imagine tentar colocar 2 litros de água em um copo de 500ml.</p><br>
+
+                <h3>Os 4 Comportamentos:</h3>
                 <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
+                    <li><strong>visible:</strong> (Padrão) O conteúdo vaza para fora da caixa e pode cobrir outros
+                        elementos.</li>
+                    <li><strong>hidden:</strong> O que sobrar é "podado". Ele some da tela e o usuário não consegue ver.
                     </li>
+                    <li><strong>scroll:</strong> Força o aparecimento de barras de rolagem (mesmo que não precise).</li>
+                    <li><strong>auto:</strong> Inteligente. Só mostra a barra de rolagem se o conteúdo realmente não
+                        couber.</li>
                 </ul>
-                <br><hr><br>
+
+
+
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>Clique em <strong>Executar</strong>. Note que o texto está vazando da caixa azul.</li>
+                    <li>No CSS, dentro de <code>.caixa</code>, adicione <code>overflow: hidden;</code> e veja o corte.
+                    </li>
+                    <li>Agora mude para <code>overflow: auto;</code> e tente rolar o texto dentro da caixa.</li>
+                    <li><strong>Dica Extra:</strong> Use <code>overflow-x</code> ou <code>overflow-y</code> para
+                        controlar apenas a horizontal ou vertical.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +67,22 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<div class="caixa">
+  <h3>Título da Caixa</h3>
+  <p>Este é um texto muito longo que foi feito apenas para testar como o overflow se comporta. Se eu continuar escrevendo aqui, o texto vai passar do limite de 150px de altura que eu defini no CSS. O que vai acontecer? Ele vai vazar ou vai ficar escondido?</p>
+</div></textarea>
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
-
-color: white;
-background-color: red; 
+.caixa {
+  width: 250px;
+  height: 150px;
+  background-color: #e3f2fd;
+  border: 3px solid #2196f3;
+  padding: 15px;
+  font-family: sans-serif;
+  
+  /* Adicione o overflow aqui: */
+  overflow: visible;
 }</textarea>
 
                         <label class="jsLabel">JS</label>

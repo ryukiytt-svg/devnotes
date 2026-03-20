@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Imagens</title>
 </head>
 
 <body>
@@ -31,22 +31,20 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
+                <h2>Estilizando Imagens</h2>
+                <p>Podemos controlar o tamanho das imagens e até aplicar filtros visuais direto no CSS.</p>
                 <br>
                 <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
-                    </li>
+                    <li><strong>object-fit:</strong> Faz a imagem preencher o espaço sem ficar esticada.</li>
+                    <li><strong>filter:</strong> Adiciona efeitos como <code>grayscale</code> (cinza) ou
+                        <code>blur</code> (desfoque).</li>
                 </ul>
-                <br><hr><br>
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>No CSS, tente mudar o <code>grayscale(1)</code> para <code>sepia(1)</code>.</li>
+                    <li>Mude o <code>border-radius</code> para <code>50%</code> para deixar a imagem redonda.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +54,14 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<img src="https://picsum.photos/200" alt="Imagem de Exemplo"></textarea>
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
-
-color: white;
-background-color: red; 
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  filter: grayscale(1);
 }</textarea>
 
                         <label class="jsLabel">JS</label>

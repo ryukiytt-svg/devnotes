@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="aulas.css">
+    <title>Flexbox</title>
+</head>
+
+<body>
+
+    <div class="div-super">
+        <header class="header">
+            <button id="menu-btn">☰</button>
+            <h1 id="header-text">DevNotes</h1>
+        </header>
+        <aside class="sidebar">
+            <div class="sidebar-contents">
+                <a href="../../index.html">HTML</a>
+                <a href="../css.html">CSS</a>
+                <a href="../../JS/js.html">JS</a>
+                <a href="#">Sobre nós</a>
+                <a id="login" href="#">Faça Login</a>
+
+            </div>
+        </aside>
+
+        <div class="container-info">
+            <div class="conteudo-aula">
+                <div class="back">
+                    <a href="../css.html">Back</a>
+                </div>
+                <h2>Dominando Flexbox</h2>
+                <p>O Flexbox transforma um elemento em um "Pai Elástico" (Container). Quando você ativa o
+                    <code>display: flex</code>, todos os filhos diretos viram "Itens Flexíveis".</p><br>
+
+                <h3>1. A Batalha dos Eixos</h3>
+                <p>Para dominar o Flexbox, você precisa entender que ele trabalha com dois caminhos:</p>
+                <ul><br>
+                    <li><strong>Main Axis (Eixo Principal):</strong> Por padrão, é a linha (horizontal).</li><br>
+                    <li><strong>Cross Axis (Eixo Cruzado):</strong> É a linha perpendicular (vertical).</li>
+                </ul><br>
+
+
+
+                <h3>2. Propriedades do Container (O Pai)</h3>
+                <ul>
+                    <li><strong>flex-direction:</strong> Define se os itens ficam em linha (<code>row</code>) ou pilha
+                        (<code>column</code>).</li><br>
+                    <li><strong>justify-content:</strong> Alinha os itens no <strong>Eixo Principal</strong>
+                        (Horizontal).
+                        <br><em>Valores: center, flex-start, flex-end, space-between (espalha tudo), space-around.</em>
+                    </li><br>
+                    <li><strong>align-items:</strong> Alinha os itens no <strong>Eixo Cruzado</strong> (Vertical).
+                        <br><em>Valores: center, stretch (estica), flex-start.</em>
+                    </li>
+                </ul>
+                <br>
+                <hr><br>
+                <h3>🛠️ Desafio de Mestre:</h3>
+                <ol>
+                    <li>Clique em <strong>Executar</strong>. Veja que os itens estão espremidos na esquerda.</li>
+                    <li>No CSS, no <code>.container</code>, adicione <code>justify-content: space-around;</code>.</li>
+                    <li>Agora, adicione <code>align-items: center;</code>.</li>
+                    <li><strong>O Grande Truque:</strong> Mude o <code>flex-direction</code> para <code>column</code> e
+                        veja como o <code>justify-content</code> agora controla a vertical!</li>
+                </ol>
+            </div>
+            <section class="informacoes">
+                <div class="playground">
+
+                    <div class="editor-area">
+
+                        <label>HTML</label>
+                        <textarea id="htmlCode">
+<div class="container">
+  <div class="box red">A</div>
+  <div class="box blue">B</div>
+  <div class="box green">C</div>
+</div></textarea>
+                        <label>CSS</label>
+                        <textarea id="cssCode">
+.container {
+  display: flex;
+  /* Tente as propriedades abaixo: */
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  
+  height: 300px;
+  background-color: #222;
+  border: 4px solid #444;
+  padding: 10px;
+  gap: 10px;
+}
+
+.box {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-radius: 8px;
+}
+
+.red { background: #ff4757; }
+.blue { background: #1e90ff; }
+.green { background: #2ed573; }</textarea>
+
+                        <label class="jsLabel">JS</label>
+                        <textarea id="jsCode">
+console.log("Hello DevNotes");
+                </textarea>
+
+
+                    </div>
+                    <div class="executor">
+                        <iframe id="resultado"></iframe>
+                        <button onclick="executarCodigo()">Executar</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <h2>DevNotes</h2>
+            <H3>Anotações de um dev</H3>
+            <p>&copy;2026 Todos os direitos reservados</p>
+        </footer>
+    </div>
+
+    <script src="aulas.js"></script>
+</body>
+
+</html>

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Gradiente</title>
 </head>
 
 <body>
@@ -31,22 +31,20 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
+                <h2>Gradiente Linear</h2>
+                <p>Em vez de uma cor sólida, o gradiente mistura duas ou mais cores em uma direção.</p>
                 <br>
-                <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
-                    </li>
-                </ul>
-                <br><hr><br>
+
+                <h3>Como usar</h3>
+                <p>Usamos dentro da propriedade <code>background</code> ou <code>background-image</code>:</p>
+                <code>background: linear-gradient(to right, red, orange);</code>
+                <br><br><hr><br>
+
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>No <strong>CSS</strong> do seu <code>body</code> ou de uma <code>div</code>, coloque:</li>
+                    <code>background: linear-gradient(45deg, #4158D0, #C850C0, #FFCC70);</code>
+                    <li>Clique em <strong>Executar</strong> e veja o resultado.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +54,12 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+</textarea>
+
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
+body {
 
-color: white;
-background-color: red; 
 }</textarea>
 
                         <label class="jsLabel">JS</label>

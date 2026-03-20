@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Grid</title>
 </head>
 
 <body>
@@ -31,22 +31,30 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
-                <br>
+                <h2>CSS Grid: Layout em Duas Dimensões</h2>
+                <p>Diferente do Flexbox (que foca em uma linha ou coluna), o <strong>Grid</strong> trabalha com linhas E
+                    colunas ao mesmo tempo. É como uma planilha de Excel poderosa.</p><br>
+
+                <h3>Conceitos Chave:</h3>
                 <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
+                    <li><strong>grid-template-columns:</strong> Define quantas colunas você quer e qual o tamanho delas.
                     </li>
+                    <li><strong>grid-template-rows:</strong> Define a altura das linhas.</li>
+                    <li><strong>fr (Fractional Unit):</strong> Uma unidade especial do Grid que ocupa "uma parte" do
+                        espaço disponível.</li>
                 </ul>
-                <br><hr><br>
-                <h3>🛠️ Teste Agora:</h3>
+
+
+
+                <br>
+                <hr><br>
+                <h3>🛠️ Desafio de Arquitetura:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>Veja que os itens estão um embaixo do outro. Vamos criar colunas!</li>
+                    <li>No CSS, no <code>.grade</code>, adicione: <code>grid-template-columns: 1fr 1fr;</code>.</li>
+                    <li>Isso criou duas colunas iguais. Agora mude para <code>1fr 2fr;</code> (a segunda coluna será o
+                        dobro da primeira).</li>
+                    <li>Adicione um <code>gap: 20px;</code> para dar respiro entre as células.</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,14 +64,37 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<div class="grade">
+ <div class="bloco item1">Header</div>
+ <div class="bloco item2">Sidebar</div>
+ <div class="bloco item3">Main Content</div>
+ <div class="bloco item4">Footer</div>
+</div>
+                        </textarea>
+
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
+.grade {
+  display: grid;
+  /* Configure seu grid aqui: */
+  
+  height: 300px;
+  background: #f4f4f4;
+  padding: 10px;
+}
 
-color: white;
-background-color: red; 
-}</textarea>
+.bloco {
+  background: #6c5ce7;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  border: 1px solid white;
+}
+
+.item1 { background: #ff7675; }
+.item4 { background: #fab1a0; }</textarea>
 
                         <label class="jsLabel">JS</label>
                         <textarea id="jsCode">

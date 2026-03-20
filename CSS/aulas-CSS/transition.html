@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Transition</title>
 </head>
 
 <body>
@@ -31,22 +31,28 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
-                <br>
+                <h2>CSS Transition: A Suavidade</h2>
+                <p>Sem a transição, as mudanças no CSS são instantâneas e secas. A <strong>transition</strong> permite
+                    que a mudança ocorra de forma gradual e elegante.</p><br>
+
+                <h3>Como usar:</h3>
+                <p>Você coloca a transição no estado <strong>normal</strong> do elemento, e não no <code>:hover</code>.
+                </p>
                 <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
-                    </li>
+                    <li><strong>transition-property:</strong> O que vai mudar (ex: <code>background-color</code>).</li>
+                    <li><strong>transition-duration:</strong> Quanto tempo demora (ex: <code>0.5s</code>).</li>
+                    <li><strong>transition-timing-function:</strong> O "ritmo" (ex: <code>ease-in-out</code>).</li>
                 </ul>
-                <br><hr><br>
+
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>Passe o mouse sobre o botão no playground. Note que ele muda de cor na hora.</li>
+                    <li>No CSS, dentro de <code>.botao</code>, adicione: <code>transition: 0.5s;</code>.</li>
+                    <li>Passe o mouse de novo. Viu como agora ele "desliza" entre as cores?</li>
+                    <li><strong>Desafio:</strong> Adicione <code>transform: scale(1.2);</code> dentro do
+                        <code>.botao:hover</code> e veja ele crescer suavemente!</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +62,35 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<div class="container">
+  <button class="botao">Passe o Mouse</button>
+</div></textarea>
+
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
 
-color: white;
-background-color: red; 
+.botao {
+  padding: 20px 40px;
+  font-size: 18px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  
+  /* Adicione a transição aqui: */
+  
+}
+
+.botao:hover {
+  background-color: #2ecc71;
+  /* Tente adicionar um transform: scale(1.1); aqui */
 }</textarea>
 
                         <label class="jsLabel">JS</label>

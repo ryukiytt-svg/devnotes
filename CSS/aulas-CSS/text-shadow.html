@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Text-Shadow</title>
 </head>
 
 <body>
@@ -31,22 +31,20 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
+                <h2>Text Shadow</h2>
+                <p>O <strong>Text-shadow</strong> adiciona profundidade ao layout, criando sombras atrás do texto
+                    (como letreiros em 3D).</p>
                 <br>
-                <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
-                    </li>
-                </ul>
-                <br><hr><br>
+                <h3>Como usar</h3>
+                <code>text-shadow: 2px 2px 4px #ff0000;</code><br>
+                <p>A ordem dos valores é: <code>deslocamento-x</code>, <code>deslocamento-y</code>,
+                    <code>desfoque</code> e <code>cor</code>.
+                <br><br><hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>No seu <strong>H1</strong>, adicione:</li>
+                    <code>text-shadow: 3px 3px 0px yellow;</code>
+                    <li>Isso cria um efeito de "camada" retrô bem legal!</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +54,12 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<h1>Teste</h1></textarea>
+
                         <label>CSS</label>
                         <textarea id="cssCode">
-div {
-
-color: white;
-background-color: red; 
+h1 {
+ 
 }</textarea>
 
                         <label class="jsLabel">JS</label>

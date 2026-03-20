@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="aulas.css">
-    <title>Opacity</title>
+    <title>Media-Queries</title>
 </head>
 
 <body>
@@ -31,22 +31,22 @@
                 <div class="back">
                     <a href="../css.html">Back</a>
                 </div>
-                <h2>Opacity vs RGBA</h2>
-                <p>Existe uma diferença crucial entre os dois quando o assunto é transparência.</p>
+                <h2>Media Queries</h2>
+                <p>As <strong>Media Queries</strong> permitem que o seu site mude de estilo dependendo do tamanho da
+                    tela (celular, tablet ou PC).</p>
                 <br>
                 <ul>
-                    <li><strong>Opacity:</strong> Deixa o elemento E tudo que estiver dentro dele (texto, imagens)
-                        transparente.</li>
-                    <li><strong>RGBA:</strong> Deixa apenas a COR (fundo ou texto) transparente, sem afetar o resto.
-                    </li>
+                    <li><strong>@media:</strong> A regra que inicia a verificação da tela.</li>
+                    <li><strong>max-width:</strong> Aplica o estilo se a tela for "menor que" o valor definido.</li>
                 </ul>
-                <br><hr><br>
+                <br>
+                <hr><br>
                 <h3>🛠️ Teste Agora:</h3>
                 <ol>
-                    <li>Crie uma div com texto dentro.</li>
-                    <li>Teste <code>opacity: 0.5;</code> (o texto também fica claro).</li>
-                    <li>Depois teste <code>background-color: rgba(255, 0, 0, 0.5);</code>. Note que o fundo fica
-                        transparente, mas o texto continua forte!</li>
+                    <li>Clique em <strong>Executar</strong> e veja que o fundo é cinza.</li>
+                    <li>O código CSS tem uma regra que diz: "Se a tela for menor que 600px, mude o fundo para azul".
+                    </li>
+                    <li>Como o nosso <code>iframe</code> geralmente simula uma tela menor, ele deve ficar azul!</li>
                 </ol>
             </div>
             <section class="informacoes">
@@ -56,13 +56,21 @@
 
                         <label>HTML</label>
                         <textarea id="htmlCode">
-<div>Teste</div></textarea>
+<div>Responsa!</div></textarea>
                         <label>CSS</label>
                         <textarea id="cssCode">
 div {
+background-color: lightgrey;
+padding: 20px;
+text-align: center;
+font-family: sans-serif;
+}
 
+@media (max-width: 600px) {
+div {
+background-color: skyblue;
 color: white;
-background-color: red; 
+}
 }</textarea>
 
                         <label class="jsLabel">JS</label>
